@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الحجز</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Tahoma, Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f1fb, #f7fbff);
+      color: #223;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1a5fb4;
+      margin-top: 0;
+    }
+    .field {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #1a5fb4;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #c5d5e8;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 16px;
+    }
+    input:focus {
+      outline: none;
+      border-color: #1a5fb4;
+      box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.15);
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2e9e5b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #25804a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>الحجز</h1>
+
+    <!-- 👇 غيّر الرابط هنا برابط Formspree بتاعك -->
+    <form action="https://formspree.io/f/Maab10953@gmail.com" method="post">
+
+      <!-- عنوان الرسالة اللي بتوصلك في الإيميل -->
+      <input type="hidden" name="_subject" value="حجز جديد - مستشفى المآب">
+
+      <div class="field">
+        <label for="patient">اسم المريض</label>
+        <input id="patient" name="patient" type="text" required>
+      </div>
+      <div class="field">
+        <label for="age">العمر</label>
+        <input id="age" name="age" type="number" min="0" max="120" required>
+      </div>
+      <div class="field">
+        <label for="doctor">اسم الطبيب</label>
+        <input id="doctor" name="doctor" type="text" required>
+      </div>
+      <div class="field">
+        <label for="date">التاريخ</label>
+        <input id="date" name="date" type="datetime-local" required>
+      </div>
+      <button type="submit"><a href="tha.html">إرسال</a>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
